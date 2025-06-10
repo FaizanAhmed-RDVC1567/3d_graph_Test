@@ -13,7 +13,7 @@ class Edge:
 
         # Fix for the test that expected 'travel_distance' to be of type 'int' but got a different type
         if not isinstance(travel_distance, int):
-            raise DataTypeError("Parameter 'travel_distance' should be of type 'int', but got a different type", None, Node, type(travel_distance))
+            raise DataTypeError("Parameter 'travel_distance' should be of type 'int', but got a different type", None, int, type(travel_distance))
 
         self.startNode = starting_node
         self.endNode = ending_node
