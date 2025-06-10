@@ -17,7 +17,7 @@ class MyTestCase(unittest.TestCase):
             test2_edge = Edge(test2_node, test1_node, 40)
         self.assertEqual(str(e_dt.exception),
                          f"Parameter 'starting_node' should be of type 'Node', but got a different type | Expected: {Node}, "
-                         f"Received: {type('')}\nError Code: {""}")
+                         f"Received: {type('')}\nError Code: {''}")
 
     def test_Edge_wrong_second_parameter(self):
         with self.assertRaises(DataTypeError) as edt:
