@@ -18,5 +18,5 @@ class Node:
         return self.name < other.name
 
     def __str__(self):
-        return (f"name={self.name}, elevation={self.elevationZ}, data={self.data[0]}, parent={self.parent}" +
-                f"Used in path={self.used}, Is on open list={self.isOnOpenList}")
+        return (f"name={self.name}, elevation={self.elevationZ}, data={self.data[0]}, parent={self.parent}," +
+                f" Used in path={self.used}, Is on open list={self.isOnOpenList}")
