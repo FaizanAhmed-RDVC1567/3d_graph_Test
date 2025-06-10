@@ -40,4 +40,4 @@ class DataTypeError(TypeError):
         # Override __str__ to provide a rich error message when the exception is printed
         base_message = super().__str__()
         return (f"{base_message} | Expected: {self.expected_type}, Received: {self.received_type}" +
-                f"\nError Code: {self.error_code if self.error_code is not None else ""}")
+            f'\nError Code: {self.error_code if self.error_code is not None else ""}')
