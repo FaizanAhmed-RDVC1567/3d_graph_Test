@@ -14,6 +14,11 @@ class Node:
     def add_edge(self, edge):
         self.edges.append(edge)
 
+    """
+    No need to test this function, it's a special function that is called during the dijkstra function execution
+    under a specific circumstance; when the calculated distances are the same and the nodes need to be ordered in order
+    for the calculated route to be efficient.
+    """
     def __lt__(self, other):
         return self.name < other.name
 
