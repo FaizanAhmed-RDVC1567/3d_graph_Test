@@ -25,7 +25,7 @@ class MyTestCase(unittest.TestCase):
             test2_node = Node("test2", 1)
             test_edge1 = Edge(test1_node, 1, 35)
         self.assertEqual(str(edt.exception),
-                         f"Parameter 'starting_node' should be of type 'Node', but got a different type | Expected: {Node}, "
+                         f"Parameter 'ending_node' should be of type 'Node', but got a different type | Expected: {Node}, "
                          f"Received: {type(1)}\nError Code: {""}")
 
     def test_Edge_wrong_third_parameter(self):
@@ -34,7 +34,7 @@ class MyTestCase(unittest.TestCase):
             test2 = Node("testB", 2)
             test_edge = Edge(test1, test2, 0.5)
         self.assertEqual(str(e.exception),
-                         f"Parameter 'starting_node' should be of type 'Node', but got a different type | Expected: {Node}, "
+                         f"Parameter 'travel_distance' should be of type 'Node', but got a different type | Expected: {Node}, "
                          f"Received: {type(0.5)}\nError code: {""}")
 
 
