@@ -2,6 +2,7 @@ import collections
 from heapq import heappush, heappop
 from main.Edge import Edge
 
+
 class Graph:
     """def __init__(self):"""
     def add_edge(self, node_start, node_end, distance):
@@ -46,7 +47,6 @@ class Graph:
 
             # Now, we just print out the used node's name:
             print(current_node.name)
-
 
         # This part of the function runs when the entire while loop has finished executing
         route = collections.deque([])

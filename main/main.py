@@ -1,4 +1,7 @@
-import Node, Edge, Graph
+import Node
+import Edge
+import Graph
+
 
 def main():
     pass

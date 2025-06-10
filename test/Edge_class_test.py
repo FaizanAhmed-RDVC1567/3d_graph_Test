@@ -2,8 +2,6 @@ import unittest
 
 from main.Node import Node
 from main.Edge import Edge
-#from Node import Node
-#from Edge import Edge
 
 
 class MyTestCase(unittest.TestCase):
