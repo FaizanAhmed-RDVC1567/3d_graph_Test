@@ -26,9 +26,10 @@ class DataTypeError(TypeError):
             if not isinstance(error_code, int):
                 raise TypeError(f"Error: 'error_code' must be an integer, but got {type(error_code)}")
 
-        if not isinstance(received_type, type(data_object)):
-            raise TypeError("Error: The 'type' of the received object, and the object that caused the error do not "
-                            "match")
+        # Seems extraneous now, will remove later.
+        #if not isinstance(received_type, type(data_object)):
+            #raise TypeError("Error: The 'type' of the received object, and the object that caused the error do not "
+                            #"match")
 
         # Store additional properties
         self.expected_type = expected_type
@@ -39,4 +40,4 @@ class DataTypeError(TypeError):
         # Override __str__ to provide a rich error message when the exception is printed
         base_message = super().__str__()
         return (f"{base_message} | Expected: {self.expected_type}, Received: {self.received_type}" +
-                f"\nError Code: {self.error_code if self.error_code is not None else ""} ")
+                f"\nError Code: {self.error_code if self.error_code is not None else ""}")
