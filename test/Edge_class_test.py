@@ -1,5 +1,5 @@
 import unittest
-
+import sys
 from main.Node import Node
 from main.Edge import Edge
 
@@ -34,6 +34,24 @@ class MyTestCase(unittest.TestCase):
         test2.edges.append(backward_edge)
         self.assertEqual(test1.edges[0].distance, 36)
         self.assertEqual(test2.edges[0].distance, 36)
+
+    def test_Edge_string_representation(self):
+        test1 = Node("test7", 4)
+        test2 = Node("test8", 4)
+        front_edge = Edge(test1, test2, 66)
+        back_edge = Edge(test2, test1, 66)
+
+        # Check the string representation of the first edge
+        self.assertEqual(f"Starting node: name=test7, elevation=4, data={sys.maxsize}, parent=None, "
+                         f"Used in path=False, Is on open list=False, Ending node: name=test8, elevation=4, "
+                         f"data={sys.maxsize}, parent=None, Used in path=False, Is on open list=False, Distance: 66",
+                         str(front_edge))
+
+        # Check the string representation of the second edge
+        self.assertEqual(f"Starting node: name=test8, elevation=4, data={sys.maxsize}, parent=None, "
+                         f"Used in path=False, Is on open list=False, Ending node: name=test7, elevation=4, "
+                         f"data={sys.maxsize}, parent=None, Used in path=False, Is on open list=False, Distance: 66",
+                         str(back_edge))
 
 
 if __name__ == '__main__':
