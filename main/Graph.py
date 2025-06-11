@@ -5,6 +5,11 @@ from main.Edge import Edge
 
 class Graph:
     """def __init__(self):"""
+    def __str__(self):
+        return ("A instance of a class that contains a network of interconnected Node objects, which use "
+                "bi-directional Edge objects that show which nodes are connected to each other.\nContains "
+                "two methods: 'add_edge' and the route-finding algorithm called 'dijkstra'.")
+
     def add_edge(self, node_start, node_end, distance):
         forwardEdge = Edge(node_start, node_end, distance)
         backwardEdge = Edge(node_end, node_start, distance)
