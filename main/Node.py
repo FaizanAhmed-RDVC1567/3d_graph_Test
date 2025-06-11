@@ -1,8 +1,14 @@
 import sys
+from main.DataTypeError import DataTypeError
 
 
 class Node:
     def __init__(self, name, elevation):
+        # The following is a fix to explicitly check that the 'name' parameter is of type 'str'
+        if not isinstance(name, str):
+            raise DataTypeError("Parameter 'name' should be of type 'str', but got a different type",
+                                None, str, type(name))
+
         self.name = name
         self.data = (sys.maxsize, self)
         self.parent = None
