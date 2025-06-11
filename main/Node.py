@@ -11,7 +11,7 @@ class Node:
 
         # Fix for the test that expected 'elevation' to be of type 'int', but got a different type.
         if not isinstance(elevation, int):
-            raise DataTypeError("Parameter 'elevation' should be of type 'int' but got a different type",
+            raise DataTypeError("Parameter 'elevation' should be of type 'int', but got a different type",
                                 None, int, type(elevation))
 
         self.name = name
