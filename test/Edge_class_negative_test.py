@@ -4,7 +4,7 @@ from main.Edge import Edge
 from main.DataTypeError import DataTypeError
 
 
-class MyTestCase(unittest.TestCase):
+class EdgeNegativeTestCase(unittest.TestCase):
     def test_Edge_wrong_first_parameter(self):
         # test1_node = Node("test1", 0)
         # test2_node = Node("test2", 0)

@@ -4,7 +4,7 @@ from main.Node import Node
 from main.Edge import Edge
 
 
-class MyTestCase(unittest.TestCase):
+class EdgePositiveTestCase(unittest.TestCase):
     # def test_something(self):
         #self.assertEqual(True, False)  # add assertion here
     def test_Edge_creation_forward(self):
